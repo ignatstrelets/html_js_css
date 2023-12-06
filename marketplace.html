@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stock Photo Marketplace</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        .column {
+            flex: 33%;
+            max-width: 33%;
+            padding: 0 4px;
+        }
+        .column figure {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Stock Photo Marketplace</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="marketplace.html">View Stock Photos</a></li>
+            <li><a href="contact.html">Contact us to get photos</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1>Marketplace</h1>
+            <br>
+            <h4><a href="#howto">How can I get Stock Images</a></h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="column">
+            <figure class="figure">
+                <img src="assets/img1.png" class="figure-img img-fluid rounded"  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Pixels</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img2.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Net</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img3.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Shapes</figcaption>
+            </figure>
+                </div>
+                <div class="column">
+            <figure class="figure">
+                <img src="assets/img4.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Column</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img5.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Metal</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img6.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Tree</figcaption>
+            </figure>
+                </div>
+                <div class="column">
+            <figure class="figure">
+                <img src="assets/img7.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Death</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img8.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">City</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img9.jpeg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Metro</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="assets/img10.webp" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">Lasagna</figcaption>
+            </figure>
+                </div>
+        </div>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h2><a href="contact.html" id="howto">Fill the contact form to get photos</a></h2>
+        </div>
+        <br>
+        <div class="panel-footer">
+            <p>Find us on VK</p>
+            <a href="https://vk.com">
+                <img class="float-right" src="assets/vk.png" alt="VK" width="27px">
+            </a></div>
+    </div>
+</div>
+</body>
+</html>
