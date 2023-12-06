@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -31,7 +32,7 @@
     </div>
     <div class="panel-body">
         <h2>Fill the contact form to get Stock Photos</h2>
-        <form class="form-horizontal" action="/main.js">
+        <form class="form-horizontal" >
             <div class="form-group">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
@@ -53,14 +54,14 @@
             <br>
             <h4>Select size of photos</h4>
             <div class="radio">
-                <label><input type="radio" name="optradio" checked>Small</label>
+                <label><input type="radio" name="size" value="small" checked>Small</label>
             </div>
             <div class="radio">
-                <label><input type="radio" name="optradio">Large</label>
+                <label><input type="radio" name="size" value="large">Large</label>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" onclick="send()" class="btn btn-default">Submit</button>
                 </div>
             </div>
         </form>
@@ -72,5 +73,33 @@
             </a></div>
     </div>
 </div>
+<script>
+    function send(){
+        let email = document.getElementById("email")
+        if (email === ""){
+            email = "example@mail.com"
+        }
+        let text = document.getElementById("text")
+        if (text === ""){
+            text = "sample text"
+        }
+        let number = document.getElementById("number")
+        if (number == null ){
+            number = 0
+        }
+        let radio = document.getElementsByName("size")
+        for (i = 0; i < radio.length; i++) {
+            if (radio[i].checked){
+                var size = radio[i].value
+            }
+        }
+        fetch('https://google.com?email='+email+'&text'+text+'&number'+number, {
+            method: "POST"
+        })
+            .then(response => response.json())
+            .then((json) => console.log(json))
+            .catch(error => console.error(error));
+    }
+</script>
 </body>
 </html>
